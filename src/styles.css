@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@source "../node_modules/flowbite";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+@theme {
+  /* Fonts */
+  --font-main-font: 'Roboto', sans-serif;
+  --font-heading-font: 'Montserrat', sans-serif;
+  /* Colors */
+  --color-primary: #4a8cff;
+  --color-primary-dark: #1c4b82;
+  --color-secondary: #7dd3fc;
+  --color-background-light: #f8fafc;
+  --color-section-color: #e0f2fe;
+  --color-card-border: #cbd5e1;
+  --color-main-text-color: #0f172a;
+  --color-first-hero: #4a8cff;
+  --color-second-hero: #7dd3fc;
+  /* Spacing */
+}
