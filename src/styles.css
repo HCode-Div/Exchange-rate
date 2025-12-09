@@ -32,11 +32,22 @@
 
 /* PrimeNg Override style */
 :root {
+  /* Input */
+  --p-inputtext-focus-border-color: rgb(74, 140, 255) !important;
+  /* Select Menu */
   --p-select-focus-border-color: rgb(74, 140, 255) !important;
   --p-select-option-selected-background: rgba(74, 140, 255, 0.2) !important;
   --p-select-option-selected-focus-background: rgba(74, 140, 255, 0.2) !important;
   --p-select-option-selected-color: black !important;
   --p-select-option-selected-focus-color: black !important;
+  /* Button */
+  --p-button-primary-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
+  --p-button-primary-hover-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
+  --p-button-primary-active-background: linear-gradient(120deg, #2877ff, #56c3f6) !important;
+  --p-button-transition-duration: 500ms;
+  --p-button-primary-border-color: transparent !important ;
+  --p-button-primary-hover-border-color: transparent !important ;
+  --p-button-primary-active-border-color: transparent !important ;
 }
 
 body {

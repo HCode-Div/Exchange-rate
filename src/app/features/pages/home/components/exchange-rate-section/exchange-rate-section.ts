@@ -3,7 +3,7 @@ import { curransie } from '../../../../../shared/services/currancies';
 
 import { ExchageRateCard } from '../exchage-rate-card/exchage-rate-card';
 import { CountriesCode } from '../../../../../core/interfaces/countries-code';
-import { SelectCurrancy } from '../select-currancy/select-currancy';
+import { SelectCurrancy } from '../../../../../shared/components/select-currancy/select-currancy';
 
 @Component({
   selector: 'exchange-section',
