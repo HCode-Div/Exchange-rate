@@ -1,0 +1,36 @@
+<section class="py-sec-padding bg-background-light">
+  <div class="custom-container mx-auto">
+    <!-- texts -->
+    <div class="">
+      <h2 class="heading-style">Exchange Rates Today</h2>
+      <p class="text-center text-sec-text-co text-lg">
+        Accurate, real-time exchange rates from trusted global sources.
+      </p>
+    </div>
+    <!-- selection -->
+    <div class="flex justify-center items-center mt-3">
+      <app-select-currancy class="grow w-full md:max-w-[30%]"></app-select-currancy>
+    </div>
+    <!-- Currancey -->
+    <div class="mt-5 grid grid-cols-1 gap-y-7 md:grid-cols-3 md:gap-7">
+      @for (item of showCurransies; track $index) {
+      <exchage-rate-card
+        [countruyCode]="item.code"
+        [currancyCode]="item.currency"
+        [currancyName]="item.currencyName"
+      ></exchage-rate-card>
+      }
+    </div>
+    @if (showBtn) {
+    <div class="text-center mt-6">
+      <button
+        (click)="loadMoreCurransies()"
+        type="button"
+        class="cursor-pointer text-white bg-brand box-border border border-transparent transition-all active:bg-brand-strong shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+      >
+        Load More
+      </button>
+    </div>
+    }
+  </div>
+</section>

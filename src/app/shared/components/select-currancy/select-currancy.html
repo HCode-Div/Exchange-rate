@@ -1,0 +1,31 @@
+<p-select
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="currencyName"
+  placeholder="Select a Currancey"
+  class="w-full"
+  (onChange)="show()"
+>
+  <ng-template pTemplate="item" let-counrty>
+    <div class="flex justify-center gap-x-5 items-center">
+      <div class="w-6 h-5">
+        <img [src]="flagsAPI(counrty.code)" class="w-full" />
+      </div>
+      <span>{{ counrty.currency }}</span>
+      <p>{{ counrty.currencyName }}</p>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="selectedItem" let-counrty>
+    <div class="flex gap-x-6 items-center">
+      <div class="w-6 h-5">
+        <img [src]="flagsAPI(counrty.code)" class="w-full" />
+      </div>
+      <span class="font-bold font-heading">{{ counrty.currency }}</span>
+      <p class="font-semibold font-logo">{{ counrty.currencyName }}</p>
+    </div>
+  </ng-template>
+</p-select>
+
+<!-- 
+code
+ -->

@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
-@source "../node_modules/flowbite";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Flowbite */
+@source "../node_modules/flowbite";
 @import 'flowbite/src/themes/default';
 @plugin "flowbite/plugin";
+
+/* PrimeNg Icons */
+@import 'primeicons/primeicons.css';
+
+/* Variables */
 @theme {
   /* Fonts */
-  --font-main-font: 'Roboto', sans-serif;
-  --font-heading-font: 'Montserrat', sans-serif;
+  --font-logo: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   /* Colors */
   --color-primary: #4a8cff;
   --color-primary-dark: #1c4b82;
@@ -15,8 +23,53 @@
   --color-background-light: #f8fafc;
   --color-section-color: #e0f2fe;
   --color-card-border: #cbd5e1;
-  --color-main-text-color: #0f172a;
+  --color-sec-text-co: #65758b;
   --color-first-hero: #4a8cff;
   --color-second-hero: #7dd3fc;
   /* Spacing */
+  --spacing-sec-padding: 60px;
+}
+
+/* PrimeNg Override style */
+:root {
+  /* Input */
+  --p-inputtext-focus-border-color: rgb(74, 140, 255) !important;
+  /* Select Menu */
+  --p-select-focus-border-color: rgb(74, 140, 255) !important;
+  --p-select-option-selected-background: rgba(74, 140, 255, 0.2) !important;
+  --p-select-option-selected-focus-background: rgba(74, 140, 255, 0.2) !important;
+  --p-select-option-selected-color: black !important;
+  --p-select-option-selected-focus-color: black !important;
+  /* Button */
+  --p-button-primary-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
+  --p-button-primary-hover-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
+  --p-button-primary-active-background: linear-gradient(120deg, #2877ff, #56c3f6) !important;
+  --p-button-transition-duration: 500ms;
+  --p-button-primary-border-color: transparent !important ;
+  --p-button-primary-hover-border-color: transparent !important ;
+  --p-button-primary-active-border-color: transparent !important ;
+}
+
+body {
+  @apply font-roboto;
+}
+
+@media (max-width: 767px) {
+  .active-link {
+    @apply py-2 px-3 bg-primary text-white rounded;
+  }
+  .custom-container {
+    @apply container;
+  }
+}
+@media (min-width: 768px) {
+  .active-link {
+    @apply p-0 bg-transparent text-primary rounded-0;
+  }
+  .custom-container {
+    @apply w-[90%] mx-auto;
+  }
+}
+.heading-style {
+  @apply font-heading text-4xl font-bold text-center my-3.5;
 }
