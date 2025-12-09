@@ -1,22 +1,4 @@
-<!-- <div class="min-h-[calc(100vh - 70px)] pt-[50px] flex flex-col">
-  <header
-    class="text-center py-sec-padding bg-linear-120 from-first-hero to-second-hero text-white pt-[70px ]"
-  >
-    <h1 class="font-heading text-5xl font-bold mb-4">Currency Converter</h1>
-    <p>Convert between major world currencies instantly with real-time exchange rates</p>
-  </header>
-  <section class="py-sec-padding bg-background-light">
-    <div class="bg-white p-5 w-[50%] mx-auto">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum veniam magni dicta
-        cupiditate repellat eum voluptatem dolorem asperiores atque suscipit natus eaque iure quos
-        quaerat, soluta quidem nihil ipsam?
-      </p>
-    </div>
-  </section>
-</div> -->
-
-<div class="min-h-[calc(100vh-70px)] bg-amber-300 flex flex-col pt-[50px]">
+<div class="min-h-[calc(100vh-70px)] flex flex-col pt-[50px]">
   <header
     class="text-center py-sec-padding bg-linear-120 from-first-hero to-second-hero text-white"
   >
@@ -24,13 +6,14 @@
     <p>Convert between major world currencies instantly with real-time exchange rates</p>
   </header>
   <section
-    class="py-sec-padding bg-background-light grow flex flex-col justify-center items-center"
+    class="py-sec-padding bg-main-bg text-main-text-co grow flex flex-col justify-center items-center"
   >
-    <div class="bg-white p-5 w-1/2 border-2 border-card-border shadow-xl rounded-xl">
+    <div class="bg-section-bg p-5 w-1/2 border-2 border-border-co shadow-xl rounded-xl">
       <!-- Amount -->
       <div class="flex flex-col gap-2 mb-4">
         <label for="amount" class="font-logo font-semibold">Amount</label>
-        <input pInputText id="amount" [(ngModel)]="value" autocomplete="off" />
+        <!-- <input pInputText id="amount" [(ngModel)]="value" autocomplete="off" /> -->
+        <p-inputnumber inputId="amount" [(ngModel)]="value" autocomplete="false" />
       </div>
 
       <!-- From -->
@@ -41,7 +24,7 @@
 
       <!-- change Button -->
       <div
-        class="cursor-pointer bg-background-light border-2 border-card-border w-fit mx-auto mt-5 px-4 py-4 rounded-[50%] flex justify-center items-center transition-all hover:bg-secondary hover:text-white active:bg-primary"
+        class="cursor-pointer bg-card-bg border-2 border-border-co w-fit mx-auto mt-5 px-4 py-4 rounded-[50%] flex justify-center items-center transition-all hover:bg-secondary hover:text-white active:bg-primary"
       >
         <i class="pi pi-arrow-right-arrow-left"></i>
       </div>

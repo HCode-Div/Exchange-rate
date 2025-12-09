@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectModule } from 'primeng/select';
-import { CountriesCode } from '../../../../../core/interfaces/countries-code';
-import { curransie } from '../../../../../shared/services/currancies';
+import { curransie } from '../../services/currancies';
+import { CountriesCode } from '../../../core/interfaces/countries-code';
 
 @Component({
   selector: 'app-select-currancy',
@@ -24,7 +24,11 @@ export class SelectCurrancy {
     this.changeCurr.emit(this.selectedCity?.currency);
   }
   flagsAPI(country: string): string {
-    return `https://flagsapi.com/${country}/flat/64.png`;
+    if (country == 'EU') {
+      return 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png';
+    } else {
+      return `https://flagsapi.com/${country}/flat/64.png`;
+    }
   }
 
   // life cycle

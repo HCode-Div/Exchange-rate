@@ -1,12 +1,12 @@
 import { Component, HostListener, inject, PLATFORM_ID } from '@angular/core';
 import {} from '@angular/cli';
 import { isPlatformBrowser } from '@angular/common';
-import { FeatureCard } from './components/feature-card/feature-card';
+import { FeatureCard } from '../../../shared/components/feature-card/feature-card';
 import { ExchangeRateSection } from './components/exchange-rate-section/exchange-rate-section';
-import { SelectCurrancy } from './components/select-currancy/select-currancy';
+
 @Component({
   selector: 'app-home',
-  imports: [FeatureCard, ExchangeRateSection, SelectCurrancy],
+  imports: [FeatureCard, ExchangeRateSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

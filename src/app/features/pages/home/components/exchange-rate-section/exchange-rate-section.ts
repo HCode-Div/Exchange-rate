@@ -14,9 +14,9 @@ import { SelectCurrancy } from '../../../../../shared/components/select-currancy
 export class ExchangeRateSection {
   // Injections
   protected readonly _cd = inject(ChangeDetectorRef);
-  readonly _c = curransie;
 
   // Properties
+  readonly _c = curransie;
   showCurransies!: CountriesCode[];
   showBtn: boolean = true;
 
@@ -27,7 +27,6 @@ export class ExchangeRateSection {
   }
 
   // Life Cycle
-
   ngOnInit(): void {
     this.showCurransies = this._c.slice(0, 9);
   }

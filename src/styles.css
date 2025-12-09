@@ -28,23 +28,42 @@
   --color-second-hero: #7dd3fc;
   /* Spacing */
   --spacing-sec-padding: 60px;
+
+  /* New Color Palette */
+
+  --color-main-bg: #0f172a;
+  --color-section-bg: #2a3a4d;
+  --color-card-bg: #273449;
+  --color-border-co: #475569;
+  --color-main-text-co: #f8fafc;
+  --color-secondary-text-co: #cbd5e1;
+  --color-white-accent-text-co: #e2e8f0;
 }
 
 /* PrimeNg Override style */
 :root {
   /* Input */
+  --p-inputtext-background: #273449 !important;
+  --p-inputtext-border-color: #475569 !important;
+  --p-inputtext-color: #f8fafc !important;
   --p-inputtext-focus-border-color: rgb(74, 140, 255) !important;
   /* Select Menu */
+  --p-select-background: #273449 !important;
+  --p-select-border-color: #475569 !important;
+  --p-select-color: #f8fafc !important;
   --p-select-focus-border-color: rgb(74, 140, 255) !important;
-  --p-select-option-selected-background: rgba(74, 140, 255, 0.2) !important;
-  --p-select-option-selected-focus-background: rgba(74, 140, 255, 0.2) !important;
-  --p-select-option-selected-color: black !important;
-  --p-select-option-selected-focus-color: black !important;
+  --p-select-option-color: #f8fafc !important;
+  --p-select-option-focus-color: #f8fafc !important;
+  --p-select-option-focus-background: #273449 !important;
+  --p-select-option-selected-background: #2a3a4d !important; /* section  */
+  --p-select-option-selected-focus-background: #2a3a4d !important; /* section */
+  --p-select-option-selected-color: #f8fafc !important;
+  --p-select-option-selected-focus-color: #f8fafc !important;
   /* Button */
   --p-button-primary-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
   --p-button-primary-hover-background: linear-gradient(120deg, #4a8cff, #7dd3fc) !important;
   --p-button-primary-active-background: linear-gradient(120deg, #2877ff, #56c3f6) !important;
-  --p-button-transition-duration: 500ms;
+  --p-button-transition-duration: 500ms !important;
   --p-button-primary-border-color: transparent !important ;
   --p-button-primary-hover-border-color: transparent !important ;
   --p-button-primary-active-border-color: transparent !important ;
@@ -72,4 +91,8 @@ body {
 }
 .heading-style {
   @apply font-heading text-4xl font-bold text-center my-3.5;
+}
+.p-select-list {
+  background-color: var(--color-main-bg) !important;
+  border: none !important;
 }
