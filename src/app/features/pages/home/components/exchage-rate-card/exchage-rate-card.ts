@@ -10,6 +10,6 @@ export class ExchageRateCard {
   @Input() countruyCode!: string;
   @Input() currancyName!: string;
   @Input() currancyCode!: string;
-  @Input() currancyChangeCode!: string;
+  @Input() currentCode: string = 'EGP';
   @Input() exchangeRate!: string;
 }
