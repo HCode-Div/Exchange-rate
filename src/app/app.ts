@@ -4,12 +4,10 @@ import { FlowbiteService } from './core/services/flowbite.service';
 import { initFlowbite } from 'flowbite';
 import { Navbar } from './shared/components/navbar/navbar';
 import { Footer } from './shared/components/footer/footer';
-import { Home } from './features/pages/home/home';
-import { Converter } from './features/pages/converter/converter';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Footer, Home, Converter],
+  imports: [Navbar, Footer, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

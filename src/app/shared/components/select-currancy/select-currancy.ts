@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectModule } from 'primeng/select';
-import { CountriesCode } from '../../../../../core/interfaces/countries-code';
-import { curransie } from '../../../../../shared/services/currancies';
+import { curransie } from '../../services/currancies';
+import { CountriesCode } from '../../../core/interfaces/countries-code';
 
 @Component({
   selector: 'app-select-currancy',
